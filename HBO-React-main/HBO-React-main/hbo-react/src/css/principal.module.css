@@ -1,0 +1,174 @@
+@import url('../styles.global.css'); 
+main {
+    background: url('../images/background-movies-series.png') no-repeat;
+    background-size: cover;
+}
+
+.button {
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    padding: 16px 40px;
+    cursor: pointer;
+    color: var(--text-color);
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.button .buttonGradient {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.subscription {
+    background: url('../images/background-movies-series.png') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.subscriptionPlans {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 40px 0;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.subscriptionCard {
+    background: var(--card-bg-color);
+    padding: 40px 60px;
+    border-radius: 8px;
+    display: flex;
+    min-height: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 1s ease-in-out;
+}
+.textSmall {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* criando a animação */
+.subscriptionPlans:has(.subscriptionCard:nth-child(1):hover)
+.subscriptionCard:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.subscriptionPlans:has(.subscriptionCard:nth-child(2):hover)
+.subscriptionCard:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+.subscriptionDescription{
+    text-align: left;
+    list-style: none;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+
+.subscriptionPrice {
+    font-size: 2rem;
+    font-family: 'raleway', sans-serif;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.subscriptionPrice .textSmall{
+    color: var(--text-color);
+    /* font-weight: bold; */
+}
+
+.subscriptionPlan {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.contents {
+    margin: 100px auto;
+}
+
+.contentsContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contentsCard {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid transparent;
+    background-position: center;
+    transition: 0.8s, background 0.8s, border 1s;
+}
+/* cria uma animação de mudança da cor da borda */
+.contentsCard:hover {
+    transform: scale(1.0);
+    border: 2px solid var(--tertiary-color);
+}
+/* quando passar o mouse nas imagens, a opacidade fica em 0, causando um efeito de escurecimento */
+.contentsCard:hover .contentsImage {
+    opacity: 0;
+}
+/*=== diminuir as imagens e centralizando === */
+.contentsImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+/* criando configurações de transição para cada imagem default: quando passar o mouse em cima da imagem, aparecerá uma outra imagem no lugar */
+/* HBO content */
+
+.contentsCard:nth-child(1):hover {
+    background-image: url('../images/hbo-hover_0.webp');
+}
+
+/* Max Originals Content */
+.contentsCard:nth-child(2):hover {
+    background-image: url('../images/MAX-Hover.webp');
+}
+
+/* DC Content */
+.contentsCard:nth-child(3):hover {
+    background-image: url('../images/DC-Hover.webp');
+}
+
+/* WB Content */
+.contentsCard:nth-child(4):hover {
+    background-image: url('../images/WB-Hover.webp');
+}
+
+/* CN Content */
+.contentsCard:nth-child(5):hover {
+    background-image: url('../images/CN-Hover.png');
+}
+
+/* UEFA Content */
+
+.contentsCard:nth-child(6):hover {
+    background-image: url('../images/UCL-Hover.webp');
+}

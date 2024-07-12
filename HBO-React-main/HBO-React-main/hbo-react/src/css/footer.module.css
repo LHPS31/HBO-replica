@@ -1,0 +1,36 @@
+@import url('../styles.global.css'); 
+.footerLink {
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 14px;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+    transition: color 0.5s;
+}
+
+.footerLink:hover {
+    color: var(--text-color);
+}
+
+.footerLegal {
+    font-size: 0.75rem;
+    color: var(--link-color);
+    margin: 0 16px;
+}
+
+.footerSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+    gap: 40px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}

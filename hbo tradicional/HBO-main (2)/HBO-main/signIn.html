@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/signIn.css">
+    <title>Entrar | HBO Max</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="menu">
+        <a href="index.html" class="menu-logo">
+            <img src="assets/images/hbo-logo.png" alt="logo HBO" class="menu-logo-image">
+        </a>
+        <div>
+            <a href="signIn.html" class="menu-item">Entrar</a>
+            <a href="#subscription" class="menu-item menu-item-button button">Assine Agora</a>
+        </div>
+    </nav>
+    <main class="content">
+        <form class="login container">
+            <h1 class="login-title">Entrar</h1>
+            <label class="login-label">Você tem uma conta HBO Max ?</label>
+            <input 
+            type="email" 
+            class="login-field"
+            name="email" 
+            placeholder="Endereço de E-mail"> 
+            <input class="login-field"
+            type="password" 
+            name="password" 
+            placeholder="Senha"
+            minlength="8"  
+            maxlength="10"  > <!-- tamanho máximo de caracteres --> <!-- tamanho mínimo de caracteres -->
+            <div class="login-actions">
+                <button type="submit" class="button button-gradient">Entrar</button>
+                <a href="#" class="login-links">Esqueceu Senha?</a>
+            </div>
+        </form>
+    </main>
+    <footer class="footer container">
+        <div>
+            <a href="" class="footer-link">Agora na HBO MAX</a><!--  tecla de atalho: alt + shift + seta pra baixo  -->
+            <a href="" class="footer-link">Em Breve</a>
+            <a href="" class="footer-link">Filmes em Destaque</a>
+            <a href="" class="footer-link">Series</a>
+            <a href="" class="footer-link">Ajuda</a>
+        </div>
+        <p class="text-small footer-legal">
+            @2024 WarnerMedia Direct Latin America, LLC Todos os direitos reservados
+            HBO Max é usado sob licença
+        </p>
+        <div class="footer-social">
+            <a href="" class="footer-social-link">
+                <img src="assets/images/fb_0.png" alt="facebook" class="footer-social-link"> 
+            </a>
+            <a href="" class="footer-social-link">
+                <img src="assets/images/twitter_0.png" alt="twitter" class="footer-social-link"> 
+            </a>
+            <a href="" class="footer-social-link">
+                <img src="assets/images/instagram_0.png" alt="instagram" class="footer-social-link"> 
+            </a>
+            <a href="" class="footer-social-link">
+                <img src="assets/images/youtube_0.png" alt="youtube" class="footer-social-link"> 
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,232 @@
+@import url('./global.css');
+
+main {
+    background: url('../images/background-movies-series.png') no-repeat;
+    background-size: cover;
+}
+
+/* header */
+
+.header {
+    position: relative;
+    margin-top: 50px;
+    padding: 100px 0 300px;
+    background-color: var(--primary-color);
+    background: linear-gradient(45deg,
+    #56125b,
+    #0f0f10,
+    #271e6e
+    );
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+}
+
+.header::after {
+    content: '';
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, 
+    var(--primary-color), transparent);
+}
+/* estilizando o conteúdo do header: imagens, paragrafos etc */
+.header-content { 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+/* estilizando os canais */
+.header-channels {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.header-channel {
+    object-fit: contain;
+}
+
+.header-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.header-title-light {
+    display: block;
+    font-weight: lighter;
+    font-size: 3rem;
+}
+.header .text-small {
+    max-width: 300px;
+    text-align: center;
+}
+
+.header-button { 
+    animation: wiggle 2.2s linear infinite;
+}
+
+/* barra divisão */
+.divider {
+    width: 70%;
+    height: 5px;
+    max-width: 800px;
+    background: var(--divider-bg-color);
+}
+
+.offer {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.offer-price {
+    font-family: 'raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.offer-price-small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.subscription {
+    background: url('../images/background-movies-series.png') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.subscription-plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 40px 0;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.subscription-card {
+    background: var(--card-bg-color);
+    padding: 40px 60px;
+    border-radius: 8px;
+    display: flex;
+    min-height: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 1s ease-in-out;
+}
+/* criando a animação */
+.subscription-plans:has(.subscription-card:nth-child(1):hover)
+.subscription-card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.subscription-plans:has(.subscription-card:nth-child(2):hover)
+.subscription-card:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+.subscription-description{
+    text-align: left;
+    list-style: none;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+
+.subscription-price {
+    font-size: 2rem;
+    font-family: 'raleway', sans-serif;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.subscription-price .text-small{
+    color: var(--text-color);
+    /* font-weight: bold; */
+}
+
+.subscription-plan {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.contents {
+    margin: 100px auto;
+}
+
+.contents-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contents-card {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid transparent;
+    background-position: center;
+    transition: 0.8s, background 0.8s, border 1s;
+}
+/* cria uma animação de mudança da cor da borda */
+.contents-card:hover {
+    transform: scale(1.0);
+    border: 2px solid var(--tertiary-color);
+}
+/* quando passar o mouse nas imagens, a opacidade fica em 0, causando um efeito de escurecimento */
+.contents-card:hover .contents-image {
+    opacity: 0;
+}
+/*=== diminuir as imagens e centralizando === */
+.contents-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+/* criando configurações de transição para cada imagem default: quando passar o mouse em cima da imagem, aparecerá uma outra imagem no lugar */
+/* HBO content */
+
+.contents-card:nth-child(1):hover {
+    background-image: url('../images/hbo-hover_0.webp');
+}
+
+/* Max Originals Content */
+.contents-card:nth-child(2):hover {
+    background-image: url('../images/MAX-Hover.webp');
+}
+
+/* DC Content */
+.contents-card:nth-child(3):hover {
+    background-image: url('../images/DC-Hover.webp');
+}
+
+/* WB Content */
+.contents-card:nth-child(4):hover {
+    background-image: url('../images/WB-Hover.webp');
+}
+
+/* CN Content */
+.contents-card:nth-child(5):hover {
+    background-image: url('../images/CN-Hover.png');
+}
+
+/* UEFA Content */
+
+.contents-card:nth-child(6):hover {
+    background-image: url('../images/UCL-Hover.webp');
+}
